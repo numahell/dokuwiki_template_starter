@@ -69,6 +69,12 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
             </div>
             <div class="clearer"></div>
 
+            <!-- ********** tabs ********** -->
+            <div id="dokuwiki__tabs">
+                <?php tpl_include_page(tpl_getConf('sidebarID')) /* includes the given wiki page */ ?>
+            </div><!-- /tabs -->
+            <div class="clearer"></div>
+            
             <!-- BREADCRUMBS -->
             <?php if($conf['breadcrumbs']){ ?>
                 <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
@@ -84,12 +90,6 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 
         <div class="wrapper">
 
-            <!-- ********** ASIDE ********** -->
-            <div id="dokuwiki__aside"><div class="pad include">
-                <?php tpl_include_page(tpl_getConf('sidebarID')) /* includes the given wiki page */ ?>
-                <div class="clearer"></div>
-                
-            </div></div><!-- /aside -->
 
             <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content"><div class="pad">
